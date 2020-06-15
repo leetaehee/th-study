@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <title>{{ config('app.name') }} | @yield('title')</title>
+    <head>
+        <title>{{ config('app.name') }} | @yield('title')</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+        <!-- 외부 css 라이브러리 -->
+        @include('includes.css.library')
 
-    <!-- common.css -->
-    <link rel="stylesheet" href="./css/common.css">
+        <!-- 기능별 css 정의 -->
+        @yield('css')
+    </head>
+    <body>
+        <!-- 네비게이션 -->
+        @include('layouts.partial.navigation')
 
-    <!-- font Awesome CDN -->
-    <link rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-          integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-          crossorigin="anonymous">
-</head>
-<body>
-    @include('layouts.partial.navigation')
+        <!-- 내용 -->
+        @yield('content')
 
-    @yield('content')
+        <!-- footer source -->
+        @include('layouts.partial.footer')
 
-    @include('layouts.partial.footer')
+        <!-- 외부 라이브러리 파일 -->
+        @include('includes.js.library')
 
-    <!-- Jquery Library-->
-    <script src="./js/jquery-3.5.1.min.js"></script>
-
-    <!-- bootstrap js Library  -->
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-
-    @yield('script')
-</body>
+        <!-- 기능별 스크립트 정의 -->
+        @yield('script')
+    </body>
 </html>
