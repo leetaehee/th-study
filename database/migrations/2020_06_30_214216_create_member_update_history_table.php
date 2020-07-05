@@ -7,14 +7,13 @@ use Illuminate\Support\Facades\Schema;
 class CreateMemberUpdateHistoryTable extends Migration
 {
     /**
-     * Run the migrations.
+     * 회원정보 변동이력 테이블 생성
      *
      * @return void
      */
     public function up()
     {
         Schema::create('th_member_update_historys', function (Blueprint $table) {
-            // 회원정보 변동이력 테이블
             $table->increments('history_id')->comment('기본키');
             $table->integer('member_id')->unsigned()->comment('회원 PK');
             $table->string('update_memo', 255)->comment('변동사유');

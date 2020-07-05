@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateMemberGradeTable extends Migration
 {
     /**
-     * Run the migrations.
+     * 회원 등급 테이블 생성
      *
      * @return void
      */
@@ -22,6 +22,7 @@ class CreateMemberGradeTable extends Migration
             $table->integer('attendance_condition')->unsigned()->default(0)->comment('출석조건');
             $table->integer('possession_condition')->unsigned()->default(0)->comment('보유스터디조건(갯수)');
             $table->integer('reward_point')->default(100)->comment('보상포인트');
+            $table->boolean('use_flag')->default(1)->comment('사용여부');
             $table->string('register', 30)->comment('관리자');
             $table->dateTime('regi_date')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('등록시각');
             $table->string('modifier', 30)->nullable()->comment('수정자');

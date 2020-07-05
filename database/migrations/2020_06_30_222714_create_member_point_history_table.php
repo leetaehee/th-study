@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateMemberPointHistoryTable extends Migration
 {
     /**
-     * Run the migrations.
+     * 회원 포인트 충전 히스토리 테이블 생성
      *
      * @return void
      */

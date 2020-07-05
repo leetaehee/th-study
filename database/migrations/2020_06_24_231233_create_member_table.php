@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateMemberTable extends Migration
 {
     /**
-     * Run the migrations.
+     * 세대원 테이블 생성
      *
      * @return void
      */

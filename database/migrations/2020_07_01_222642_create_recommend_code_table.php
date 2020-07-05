@@ -7,16 +7,18 @@ use Illuminate\Support\Facades\Schema;
 class CreateRecommendCodeTable extends Migration
 {
     /**
-     * Run the migrations.
+     * 추천 경로 코드 테이블 생성 (회원가입 시 필요)
      *
      * @return void
      */
     public function up()
     {
         Schema::create('th_recommend_codes', function (Blueprint $table) {
-           // 추천경로 코드 테이블
             $table->increments('recommend_id')->comment('기본키');
             $table->string('name', 30)->comment('코드명');
+            $table->boolean('use_flag')->default(1)->comment('사용여부');
+
+            $table->unique('name');
 
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';

@@ -7,14 +7,13 @@ use Illuminate\Support\Facades\Schema;
 class CreateMemberLoginHistoryTable extends Migration
 {
     /**
-     * Run the migrations.
+     * 로그인 이력 테이블 생성
      *
      * @return void
      */
     public function up()
     {
         Schema::create('th_member_login_historys', function (Blueprint $table) {
-            // 로그인기록
             $table->increments('history_id')->comment('기본키');
             $table->integer('member_id')->unsigned()->comment('회원 PK');
             $table->dateTime('login_date')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('로그인시각');
