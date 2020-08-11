@@ -2,10 +2,13 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Class EducationCodeTableSeeder 최종학력 데이터 추가 후 캐시 생성
+ */
 class EducationCodeTableSeeder extends Seeder
 {
     /**
-     * 최종학력 코드 테이블에 데이터 생성
+     * 실행
      *
      * @return void
      */
@@ -17,15 +20,19 @@ class EducationCodeTableSeeder extends Seeder
             return;
         }
 
-        DB::table('th_education_codes')->truncate();
+        // 기존 데이터 모두 삭제
+        App\EducationCode::truncate();
 
+        // 데이터 추가
         foreach ($educations as $key => $value) {
-            DB::table('th_education_codes')->insert([
-                [
-                    'name' => $value['name'],
-                    'use_flag' => $value['use_flag']
-                ]
+            App\EducationCode::create([
+                'name' => $value['name']
             ]);
         }
+
+        // 캐시
+        Cache::rememberForever('eduction_codes', function (){
+            return DB::table('th_education_codes')->get();
+        });
     }
 }
