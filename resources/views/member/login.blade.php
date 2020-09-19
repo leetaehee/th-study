@@ -9,7 +9,7 @@
     <div class="form-login">
         <form method="post">
             <div class="text-center mt-3 mb-3">
-                <h3>로그인</h3>
+                <h3>로그인1</h3>
             </div>
             <div class="form-group">
                 <label for="user-id">아이디</label>
