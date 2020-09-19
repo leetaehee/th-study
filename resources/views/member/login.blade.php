@@ -9,7 +9,11 @@
     <div class="form-login">
         <form method="post">
             <div class="text-center mt-3 mb-3">
+<<<<<<< HEAD
                 <h3>로그인</h3>
+=======
+                <h3>로그인1</h3>
+>>>>>>> develop/th-study
             </div>
             <div class="form-group">
                 <label for="user-id">아이디</label>
@@ -20,7 +24,7 @@
                        value="">
                 <small id="user-id-help"
                        class="form-text text-muted">
-                    아이디를 입력하세요.
+                    아이디를 입력하세요.(수미)
                 </small>
             </div>
             <div class="form-group">
