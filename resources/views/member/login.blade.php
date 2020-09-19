@@ -12,7 +12,7 @@
                 <h3>로그인(수미)</h3>
             </div>
             <div class="form-group">
-                <label for="user-id">아이디</label>
+                <label for="user-id">아이디222</label>
                 <input type="text"
                        id="user-id"
                        name="user_id"
