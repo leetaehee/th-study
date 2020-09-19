@@ -20,7 +20,7 @@
                        value="">
                 <small id="user-id-help"
                        class="form-text text-muted">
-                    아이디를 입력하세요.(수미)
+                    아이디를 입력하세요.
                 </small>
             </div>
             <div class="form-group">
