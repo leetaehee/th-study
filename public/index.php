@@ -6,7 +6,7 @@
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
  */
-echo '말티즈 대통령';
+
 define('LARAVEL_START', microtime(true));
 
 /*
